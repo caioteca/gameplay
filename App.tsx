@@ -10,7 +10,8 @@ import {
   Rajdhani_500Medium,
   Rajdhani_700Bold,
 } from '@expo-google-fonts/rajdhani';
-import { Signin } from './src/screens/Signin';
+import { Background } from './src/components/Background';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -43,9 +44,9 @@ export default function App() {
   }
 
   return (
-    <>
+    <Background>
       <StatusBar backgroundColor="transparent" translucent />
-      <Signin />
-    </>
+      <Routes />
+    </Background>
   );
 }
